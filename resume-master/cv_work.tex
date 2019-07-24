@@ -1,0 +1,153 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\moderncvtheme[black]{classic}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% last language in the list is the one used in the document
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{moderntimeline}
+\usepackage{multicol}
+\usepackage{fontawesome}
+\moderncvicons{awesome}
+\usepackage{tikz}
+
+% Thick section line
+\makeatletter
+% define column thickness
+\newlength{\hintscolumnthickness}
+\setlength{\hintscolumnthickness}{3pt}
+% define column width
+\newlength{\sidecolumnwidth}
+\RenewDocumentCommand{\section}{sm}{%
+% set column width (need to do this because title lenght is different each time)
+\setlength{\sidecolumnwidth}{(\linewidth-\widthof{\sectionstyle{#2}}-\separatorcolumnwidth-\separatorcolumnwidth)/2}
+  \par\addvspace{2.5ex}%
+  \phantomsection{}% reset the anchor for hyperrefs
+  \addcontentsline{toc}{section}{#2}%
+  % left
+  \parbox[t]{\sidecolumnwidth}{\strut\raggedleft\raisebox{\baseletterheight}{\color{color1}\rule{\sidecolumnwidth}{\hintscolumnthickness}}}%
+  % title
+  \hspace{\separatorcolumnwidth}%
+  \sectionstyle{#2}%
+  \hspace{\separatorcolumnwidth}%
+  % right
+  \parbox[t]{\sidecolumnwidth}{\strut\raggedleft\raisebox{\baseletterheight}{\color{color1}\rule{\sidecolumnwidth}{\hintscolumnthickness}}}%
+  \par\nobreak\addvspace{1ex}\@afterheading}% to avoid a pagebreak after the heading
+\makeatother
+
+% Configure page margins with geometry
+\geometry{left=1.5cm, top=0.75cm, right=1.5cm, bottom=0.75cm, footskip=.5cm}
+
+% Configure column width for timelines
+\setlength{\hintscolumnwidth}{2cm}
+
+% time interval for resume entries
+\tlmaxdates{2010}{2017}
+% width of the timeline 
+\tlwidth{0.8ex}
+
+% custom fonts for header 
+\renewcommand*{\namefont}{\fontsize{45}{45}\mdseries\upshape}
+\renewcommand*{\titlefont}{\fontsize{17}{20}\mdseries\upshape}
+\renewcommand*{\addressfont}{\fontsize{10}{12}\mdseries\itshape}
+
+% infos
+\firstname{Zhao}
+\familyname{Gong}  
+\title{Engineering student in Electronic and Infromation}         
+\address{Beijing Jiaotong University, Hai Dian District, Beijing, Beijing,CN} 
+\homepage{emt.bjtu.edu.cn/zhaogong}
+\mobile{(+86)15600699850}  
+\email{gongzhao1995@outlook.com}
+%\extrainfo{\emailsymbol\emaillink{gongzhao1995@outlook.com}}
+\extrainfo{Wechat ID:595313785}
+\social[github]{StarGazer1995}
+%\social[]{595313785}
+%\social[linkedin]{gaelfoppolo} 
+%\social[twitter]{gaelugio} 
+
+%\photo[95pt][0pt]{ressources/picture}	
+
+\begin{document}
+
+\maketitle
+
+\vspace*{-13mm}
+\section{\faGraduationCap~Education}
+\cventry{2014--2018}{Bachelor of Engineering}{School of Electronic and Information Engineering}{Beijing Jiaotong University}{China}{
+	\begin{itemize}
+		\item Majored in Automation(EE domain)
+		\item Major Courses: \textbf{Control Theories, Fundamentals of Artifical Intelligence, Intelligence Control}, Project of Electronic Systems,Computer Hardware Laboratory,Principles and Application of Microcontroller,Principle and Interface Technology of Microcomputer
+		\item Major GPA:3.34
+		\item Toefl:93(will be updated)
+		\item GRE:315+3.0 
+	\end{itemize}
+	}
+\vspace*{-2mm}
+\section{\faBriefcase~Related Experience}
+\cventry{6/2018-present}{Research Assistant}{Institute of Advanced Control Systems}{Supervisor: Chair Prof. Ze Liu}{BJTU}{
+	\begin{itemize}
+		\item Response for constructing a new big data platform;
+			 implemented new data storage methods to replace the old data warehouse;
+			 provide online data processing service;
+			 made the platform containerized for easliy implemented and scalable;
+			 wrote the instuction of implement and errors analyze.
+		\item Joined a group of Ph.D Candidates to analyze the data from a project by using the platform mentioned above;
+				Implemented Deep learning methods and non-deep learning methods to track the status of a system and predict potential malfunctions;
+				Compared the answer of those methods. 
+		\item Developed a new probe to collect data; 
+				employed the platform constructed in the Graduation Project to do more experiment;
+				analyzed data from experiment;
+				\textbf{Submit the paper as the First Author in IEEE TVT.}
+		\item Response for research information archive;
+				assisted supervisor to manage the Laboratory;
+				helped evaluate papers.
+		\item Constructed a IoT platform to make the lab intelligent;
+				Modified a wireness printer could print file from remote;
+				developed a group of sensor and actuator to monitor the quality of air in the lab remotely and to control it automaticlly.
+	\end{itemize}	
+}
+\cventry{12/2018-3/2019}{Team Leader}{Histopathologic Cancer Detection
+Histopathologic Cancer Detection}{}{Kaggle}{
+	\begin{itemize}
+		\item Implemented different methods to investigate data;
+		\item Searched the GPU rental provider cross the Internet; 
+				investigated and compared amont the performance and price of those providers
+		\item Established a online data analyze platform;
+				 realized online programming and visualize;
+				 built a data warehouse to store data offline;
+				 employed methods to analyze the distribution of the data;
+				 optimized data for better test score.
+		\item Built a remote and user friendly deep learning platform;
+				 realized online hyper-parameters adjusting and result visualing;
+				 employed different Nerual Networks framewares for comparation;
+				 employed different CNN networks to predict answer to the test data;
+				 cross analyzed the answer to the data from different the framewares;
+				 create a vote method to obtain the most possible answer.
+		\item Max accuracy score: 97\%
+	\end{itemize}	
+}
+
+\cventry{12/2017-5/2018}{Group Leader, Frameware Designer, Programmer}{Graduation Project}{Advisor: Prof. Liu}{BJTU}{
+	\begin{itemize}
+		\item Established a scalable big data procssing platform; 
+			realized real-time computation of parameters analyze; 
+			built a data warehouse to store data offline; 
+			provide a reliable and efficient data source to support data mining.
+		\item Constructed a online project submission web-site for remote projects;
+		\item Developed a real-time electronic probe; 
+			Implemented a broker system to convey the data from the probe;
+			Provide different mode to collect the data from electronic circuits. 
+		\item Highest grade in the final evaluation.
+	\end{itemize}	
+}
+\vspace*{-2mm}
+
+\section{\faGears~Skills}
+\cvcomputer{OS}{Linux, Unix, Windows}{Administration}{\ Apache, Mailman}
+\cvcomputer{Programming}{\textsc{Java, C/C++, Go}}{Scripting}{\textsc{C$\sharp$, VB, Python}}
+\cvcomputer{Scientific}{Matlab, Autocad, Altium Dedsigner}{Typography}{\LaTeX}
+
+\vspace*{-5mm}
+\end{document}
